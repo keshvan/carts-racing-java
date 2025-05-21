@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom"
+
 export default function Home() {
+  const navigate = useNavigate();
   return (
     <div className="flex justify-between px-52">
       <section>
@@ -8,11 +11,8 @@ export default function Home() {
             <p className="text-gray-600">20.05.2025 • Кумысная поляна</p>
           </div>
           <div className="flex gap-3">
-            <button className="bg-blue-600 text-white px-4 py-1 rounded hover:bg-blue-500">
+            <button className="bg-blue-600 text-white px-4 py-1 rounded hover:bg-blue-500" onClick={() => navigate("/race-page")}>
               Подробнее
-            </button>
-            <button className="bg-green-600 text-white px-4 py-1 rounded hover:bg-green-500">
-              Участвовать
             </button>
           </div>
         </div>
@@ -28,7 +28,7 @@ export default function Home() {
             </div>
           </div>
           <div>
-            <button className="text-blue-600 hover:underline">Профиль</button>
+            <button className="text-blue-600 hover:underline" onClick={() => navigate("/user-profile")}>Профиль</button>
           </div>
         </div>
       </section>
