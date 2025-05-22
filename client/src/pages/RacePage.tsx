@@ -33,8 +33,8 @@ const participants = [
 ];
 
 const carts = [
-  {id: 1, imageUrl: "https://preview.redd.it/my-friends-and-i-did-the-red-bull-soapbox-race-as-wallace-v0-9l38w7vi85a91.jpg?width=640&crop=smart&auto=webp&s=9c88653ca667c0d03fe8469c166e631121d90d5e", name: "тачка", points: 21}, 
-  {id: 2, imageUrl: "https://preview.redd.it/my-friends-and-i-did-the-red-bull-soapbox-race-as-wallace-v0-9l38w7vi85a91.jpg?width=640&crop=smart&auto=webp&s=9c88653ca667c0d03fe8469c166e631121d90d5e", name: "тачка", points: 21}
+    { id: 1, imageUrl: "https://preview.redd.it/my-friends-and-i-did-the-red-bull-soapbox-race-as-wallace-v0-9l38w7vi85a91.jpg?width=640&crop=smart&auto=webp&s=9c88653ca667c0d03fe8469c166e631121d90d5e", name: "тачка", points: 21 },
+    { id: 2, imageUrl: "https://preview.redd.it/my-friends-and-i-did-the-red-bull-soapbox-race-as-wallace-v0-9l38w7vi85a91.jpg?width=640&crop=smart&auto=webp&s=9c88653ca667c0d03fe8469c166e631121d90d5e", name: "тачка", points: 21 }
 ]
 
 
@@ -75,94 +75,90 @@ export default function RacePage() {
                 </div>
             )}
             {editOpen && (
-                <>
-                    {editOpen && (
-                        <div className="fixed top-0 left-0 w-screen h-screen bg-black/50 flex items-center justify-center z-50">
-                            <form
-                                className="bg-white rounded shadow-lg p-6 w-full max-w-2xl space-y-4"
-                            >
-                                <h2 className="text-xl font-bold">Редактировать гонку</h2>
+                <div className="fixed top-0 left-0 w-screen h-screen bg-black/50 flex items-center justify-center z-50">
+                    <form
+                        className="bg-white rounded shadow-lg p-6 w-full max-w-2xl space-y-4"
+                    >
+                        <h2 className="text-xl font-bold">Редактировать гонку</h2>
 
-                                <div>
-                                    <label className="block font-medium mb-1">Название:</label>
-                                    <input
-                                        name="name"
-                                        className="w-full border rounded px-3 py-2"
-                                    />
-                                </div>
-
-                                <div>
-                                    <label className="block font-medium mb-1">Место:</label>
-                                    <input
-                                        name="location"
-                                        className="w-full border rounded px-3 py-2"
-                                    />
-                                </div>
-
-                                <div>
-                                    <label className="block font-medium mb-1">Дата:</label>
-                                    <input
-                                        type="date"
-                                        name="date"
-                                        className="w-full border rounded px-3 py-2"
-                                    />
-                                </div>
-
-                                <div>
-                                    <label className="block font-medium mb-1">Описание:</label>
-                                    <textarea
-                                        name="description"
-                                        className="w-full border rounded px-3 py-2"
-                                        rows={3}
-                                    />
-                                </div>
-
-                                <div className="flex gap-4">
-                                    <div className="flex-1">
-                                        <label className="block font-medium mb-1">Макс. зрителей:</label>
-                                        <input
-                                            type="number"
-                                            name="maxViewers"
-                                            className="w-full border rounded px-3 py-2"
-                                        />
-                                    </div>
-                                    <div className="flex-1">
-                                        <label className="block font-medium mb-1">Макс. участников:</label>
-                                        <input
-                                            type="number"
-                                            name="maxParticipants"
-                                            className="w-full border rounded px-3 py-2"
-                                        />
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <label className="block font-medium mb-1">Ссылка на трансляцию (опционально):</label>
-                                    <input
-                                        name="streamUrl"
-                                        placeholder="https://youtube.com/..."
-                                        className="w-full border rounded px-3 py-2"
-                                    />
-                                </div>
-
-                                <div className="flex justify-end gap-4 pt-4">
-                                    <button
-                                        type="button"
-                                        className="px-4 py-2 rounded border border-gray-400 hover:bg-gray-100"
-                                    >
-                                        Отмена
-                                    </button>
-                                    <button
-                                        type="submit"
-                                        className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
-                                    >
-                                        Cохранить
-                                    </button>
-                                </div>
-                            </form>
+                        <div>
+                            <label className="block font-medium mb-1">Название:</label>
+                            <input
+                                name="name"
+                                className="w-full border rounded px-3 py-2"
+                            />
                         </div>
-                    )}
-                </>
+
+                        <div>
+                            <label className="block font-medium mb-1">Место:</label>
+                            <input
+                                name="location"
+                                className="w-full border rounded px-3 py-2"
+                            />
+                        </div>
+
+                        <div>
+                            <label className="block font-medium mb-1">Дата:</label>
+                            <input
+                                type="date"
+                                name="date"
+                                className="w-full border rounded px-3 py-2"
+                            />
+                        </div>
+
+                        <div>
+                            <label className="block font-medium mb-1">Описание:</label>
+                            <textarea
+                                name="description"
+                                className="w-full border rounded px-3 py-2"
+                                rows={3}
+                            />
+                        </div>
+
+                        <div className="flex gap-4">
+                            <div className="flex-1">
+                                <label className="block font-medium mb-1">Макс. зрителей:</label>
+                                <input
+                                    type="number"
+                                    name="maxViewers"
+                                    className="w-full border rounded px-3 py-2"
+                                />
+                            </div>
+                            <div className="flex-1">
+                                <label className="block font-medium mb-1">Макс. участников:</label>
+                                <input
+                                    type="number"
+                                    name="maxParticipants"
+                                    className="w-full border rounded px-3 py-2"
+                                />
+                            </div>
+                        </div>
+
+                        <div>
+                            <label className="block font-medium mb-1">Ссылка на трансляцию (опционально):</label>
+                            <input
+                                name="streamUrl"
+                                placeholder="https://youtube.com/..."
+                                className="w-full border rounded px-3 py-2"
+                            />
+                        </div>
+
+                        <div className="flex justify-end gap-4 pt-4">
+                            <button
+                                type="button"
+                                className="px-4 py-2 rounded border border-gray-400 hover:bg-gray-100"
+                            >
+                                Отмена
+                            </button>
+                            <button
+                                type="submit"
+                                className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
+                            >
+                                Cохранить
+                            </button>
+                        </div>
+                    </form>
+                </div>
             )}
             {joinOpen && (
                 <div className="fixed top-0 left-0 w-screen h-screen bg-black/50 flex items-center justify-center z-50">
@@ -171,7 +167,6 @@ export default function RacePage() {
                     >
                         <h2 className="text-xl font-bold">Участие в гонке</h2>
 
-                        {/* Выбор роли */}
                         <div className="space-y-2">
                             <label className="flex items-center gap-2">
                                 <input
